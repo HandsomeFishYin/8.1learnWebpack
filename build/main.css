@@ -2,3 +2,11 @@
   color: red; }
   .aa .bb {
     font-size: 30px; }
+
+ul li {
+  height: 40px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  line-height: 40px;
+  list-style: none;
+  padding-left: 20px; }

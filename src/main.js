@@ -5,12 +5,13 @@
 //
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/component.jsx';
-
+//import Container from './components/component.js'
+//import Container from './react-dnd-simple/Container.js';
+import Container from './react-dnd-Cancel-on-dropoutside/Container.js'
 
 main();
 
 function main() {
-    ReactDOM.render(<Hello />, document.body);
+    ReactDOM.render(<Container />, document.body);
 }
 
