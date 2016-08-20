@@ -23,13 +23,7 @@ const cardSource = {
 
     endDrag(props, monitor) {
 
-        //其实去掉好像也没差？
-        //const { id: droppedId, originalIndex } = monitor.getItem();
-        //const didDrop = monitor.didDrop();
-        //
-        //if (!didDrop) {
-        //    props.moveCard(droppedId, originalIndex);
-        //}
+
         console.log("monitor.getItem()",monitor.getItem());
         console.log("props",props);
 
