@@ -1,5 +1,8 @@
+@import "medicalCareStyle/variables";
 .aa{
-  color:red;
+  color:blue;
+  font-size: 20px;
+
   .bb{
     font-size: 30px;
   }
@@ -14,5 +17,6 @@ ul{
     line-height: 40px;
     list-style: none;
     padding-left: 20px;
+
   }
 }
