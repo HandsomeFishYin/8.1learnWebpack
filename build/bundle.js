@@ -132,21 +132,24 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _component = __webpack_require__(177);
+	var _Container = __webpack_require__(177);
 
-	var _component2 = _interopRequireDefault(_component);
+	var _Container2 = _interopRequireDefault(_Container);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	main(); /**
-	         * Created by HelenYin on 2016/8/2.
-	         */
+	main();
+	//import Container from './components/component.js'
+	//import Container from './react-dnd-simple/Container.js';
+	/**
+	 * Created by HelenYin on 2016/8/2.
+	 */
 	//js的入口文件
 	//
 
 
 	function main() {
-	  _reactDom2.default.render(_react2.default.createElement(_component2.default, null), document.body);
+	  _reactDom2.default.render(_react2.default.createElement(_Container2.default, null), document.body);
 	}
 
 /***/ },
@@ -21527,7 +21530,10 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _dec, _dec2, _class, _class2, _temp;
+	var _dec, _dec2, _class, _class2, _temp; /**
+	                                          * Created by HelenYin on 2016/8/13.
+	                                          */
+
 
 	var _react = __webpack_require__(3);
 
@@ -21800,7 +21806,7 @@
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _dec, _dec2, _class, _class2, _temp; /**
-	                                          * Created by HelenYin on 2016/8/3.
+	                                          * Created by HelenYin on 2016/8/13.
 	                                          */
 
 
@@ -21838,16 +21844,9 @@
 	        };
 	    },
 	    endDrag: function endDrag(props, monitor) {
-	        var _monitor$getItem = monitor.getItem();
 
-	        var droppedId = _monitor$getItem.id;
-	        var originalIndex = _monitor$getItem.originalIndex;
-
-	        var didDrop = monitor.didDrop();
-
-	        if (!didDrop) {
-	            props.moveCard(droppedId, originalIndex);
-	        }
+	        console.log("monitor.getItem()", monitor.getItem());
+	        console.log("props", props);
 	    }
 	};
 
@@ -21856,9 +21855,9 @@
 	        return false;
 	    },
 	    hover: function hover(props, monitor) {
-	        var _monitor$getItem2 = monitor.getItem();
+	        var _monitor$getItem = monitor.getItem();
 
-	        var draggedId = _monitor$getItem2.id;
+	        var draggedId = _monitor$getItem.id;
 	        var overId = props.id;
 
 
@@ -21931,7 +21930,7 @@
 	  value: true
 	});
 	/**
-	 * Created by HelenYin on 2016/8/3.
+	 * Created by HelenYin on 2016/8/13.
 	 */
 	exports.default = {
 	  CARD: 'card'

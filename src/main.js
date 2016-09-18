@@ -12,6 +12,6 @@ import Container from './react-dnd-Cancel-on-dropoutside/Container.js'
 main();
 
 function main() {
-    ReactDOM.render(<Container />, document.body);
+    ReactDOM.render(<div style={{display:'none'}}><Container /></div>, document.body);
 }
 
