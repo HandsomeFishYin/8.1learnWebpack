@@ -227,6 +227,98 @@ $circle-number:30 !default;
 
 //空心的时间轴样式begin-----------------------------------------------------------------------------------------------------------------------
 
+body{
+  background: #000;
+}
 
+.privilege-list{
+  display: table;
+  width: 100%;
+  padding-top:3px;
+  li{
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    width: 12.5%;
+    vertical-align: middle;
+    line-height: 1;
+    .circle{
+      border:2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 24px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background-color:#736f6b;
+      right:0;
+      top:50%;
+      margin: -1px;
+      width : calc(50% - 11px);
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      width : calc(50% - 11px);
+      height: 2px;
+      background-color: #736f6b;
+      left:0;
+      top:50%;
+      margin: -1px;
+    }
+
+
+    .privilege-name{
+      position: absolute;
+      left:0;
+      right:0;
+      text-align: center;
+      font-size: 10px;
+      color: rgba(255,255,255,0.7);
+      //.rem-px(top,78);
+      top:39px;
+      //.prefix(transform,scale(0.9));
+      transform: scale(0.9);
+    }
+
+
+    &.big{
+      &:before,&:after{
+        width: calc(50% - 17px);
+      }
+      .circle{
+        width: 36px;
+        height: 36px;
+        //.line-height(67);
+        //.font-size(32);
+        line-height: 33px;
+        font-size: 16px;
+      }
+    }
+    &.white{
+      .circle{
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+    &.red{
+      .circle{
+        background: red;
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+    &:first-child:before{width: 0;}
+    &:last-child:after{width: 0;}
+  }
+}
 
 //空心的时间轴样式end-------------------------------------------------------------------------------------------------------------------------
