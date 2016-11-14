@@ -8,6 +8,7 @@ export default class Hello extends React.Component {
     render() {
         return (
             <div>
+                <p style={{color:'#fff'}}>注意 ，圆圈的背景是透明，并且 圆圈直径变大，横线会动态计算适应的宽度</p>
                 <ul className="privilege-list">
                     <li className="" >
                         <div className="circle">V0</div>
