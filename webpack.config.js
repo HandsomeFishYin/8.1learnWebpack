@@ -8,8 +8,6 @@ module.exports = {
     entry: ['webpack/hot/dev-server',
         path.resolve(__dirname, './src/main.js'),
         path.resolve(__dirname, './src/style.scss')
-        //'./src/main.js',
-         //'./src/style.scss'
     ],
     output: {
         path: path.resolve(__dirname, "build"),
